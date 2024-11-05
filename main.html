@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간편 서버 관리 도구</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="main.html" class="logo">
+                <img src="logo.png" alt="로고">
+            </a>
+            <div class="auth-section">
+                <!-- 로그인 전 -->
+                <div class="auth-buttons" id="loginButtons">
+                    <a href="login.html" class="btn-link">로그인</a>
+                </div>
+                <!-- 로그인 후 -->
+                <div class="auth-buttons" id="userButtons" style="display: none;">
+                    <a href="#" class="btn-link">내 정보</a>
+                    <a href="main.html" class="btn-link">로그아웃</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button onclick="openCreateServerModal()">새 서버 생성</button>
+            <h2>서버 목록 및 관리</h2>
+            <table id="serverTable">
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>유형</th>
+                        <th>포트</th>
+                        <th>IP</th>
+                        <th>상태</th>
+                        <th>관리</th>
+                    </tr>
+                </thead>
+                <tbody id="serverList">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 서버 생성 모달 -->
+    <div id="createServerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateServerModal()">&times;</span>
+            <h2>서버 생성</h2>
+            <input type="text" id="serverName" placeholder="서버 이름">
+            <select id="serverType">
+                <option value="web">웹 서버</option>
+                <option value="database">데이터베이스 서버</option>
+                <option value="application">애플리케이션 서버</option>
+            </select>
+            <input type="number" id="serverPort" placeholder="포트 번호">
+            <input type="text" id="serverIp" placeholder="IP 주소">
+            <button onclick="createServer()">서버 생성</button>
+        </div>
+    </div>
+
+    <!-- 서버 설정 모달 추가 -->
+    <div id="editServerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditServerModal()">&times;</span>
+            <h2>서버 설정</h2>
+            <input type="text" id="editServerName" placeholder="서버 이름">
+            <select id="editServerType">
+                <option value="web">웹 서버</option>
+                <option value="database">데이터베이스 서버</option>
+                <option value="application">애플리케이션 서버</option>
+            </select>
+            <input type="number" id="editServerPort" placeholder="포트 번호">
+            <input type="text" id="editServerIp" placeholder="IP 주소">
+            <button onclick="saveServerEdit()">저장</button>
+        </div>
+    </div>
+
+    <!-- 로그인 모달 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>로그인</h2>
+            <input type="text" id="username" placeholder="아이디">
+            <input type="password" id="password" placeholder="비밀번호">
+            <button onclick="login()">로그인</button>
+        </div>
+    </div>
+
+    <!-- 회원정보 수정 모달 -->
+    <div id="userInfoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUserInfoModal()">&times;</span>
+            <h2>회원정보 수정</h2>
+            <input type="text" id="editUsername" placeholder="아이디">
+            <input type="password" id="editPassword" placeholder="새 비밀번호">
+            <input type="password" id="editPasswordConfirm" placeholder="새 비밀번호 확인">
+            <button onclick="updateUserInfo()">수정하기</button>
+        </div>
+    </div>
+
+    <script async type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
