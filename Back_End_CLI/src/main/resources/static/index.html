@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>명령어 전송 시스템</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/cli.css">
+    <link rel="stylesheet" href="./styles/explorer.css">
+    <link rel="stylesheet" href="./styles/editor.css">
+</head>
+<body>
+    <div class="server-sidebar">
+        <div class="toggle-btn server-toggle">
+            <span class="arrow">▶</span>
+        </div>
+        <div class="sidebar-content">
+            <div class="server-header">
+                <h3>서버 목록</h3>
+                <button id="add-server-btn">+</button>
+            </div>
+            <div id="server-list">
+                <!-- 서버 목록이 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <!-- 컴포넌트가 여기에 동적으로 로드됩니다 -->
+    </div>
+    <div class="tools-sidebar">
+        <div class="toggle-btn tools-toggle">
+            <span class="arrow">◀</span>
+        </div>
+        <div class="sidebar-content">
+            <button class="sidebar-button" data-type="cli">CLI</button>
+            <button class="sidebar-button" data-type="explorer">File Explorer</button>
+            <button class="sidebar-button" data-type="editor">Text Editor</button>
+            <button class="sidebar-button" data-type="container">Docker Container</button>
+            <button class="sidebar-button" data-type="compose">Docker Compose</button>
+            <button class="sidebar-button" data-type="Contract">Smart Contract</button>
+            <button class="sidebar-button" data-type="chat">AI assistant</button>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

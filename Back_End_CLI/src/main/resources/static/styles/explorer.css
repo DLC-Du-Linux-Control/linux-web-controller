@@ -1,0 +1,132 @@
+.explorer-container {
+    width: 100%;
+    height: calc(100vh - 350px);
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: all 0.3s ease;
+    min-width: 600px;
+    max-width: 1200px;
+    margin-bottom: 600px;
+    overflow: auto;
+}
+
+.current-path {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.path-container {
+    flex: 1;
+    text-align: left;
+}
+
+.refresh-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.refresh-button:hover {
+    background-color: #5a6268;
+}
+
+.file-list {
+    flex: 1;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    overflow-y: auto;
+    min-height: 200px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.file-item:hover {
+    background-color: #e9ecef;
+}
+
+.file-item.directory {
+    color: #2c3e50;
+}
+
+.file-item.directory::before {
+    content: "📁";
+    margin-right: 10px;
+}
+
+.file-item.file::before {
+    content: "📄";
+    margin-right: 10px;
+}
+
+.file-upload {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 150px;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #218838;
+}
+
+#file-input {
+    display: none;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.drop-zone.drag-over {
+    background-color: #f8f9fa;
+    border-color: #28a745;
+}
+
+.drop-zone-text {
+    color: #999;
+    font-size: 14px;
+} 

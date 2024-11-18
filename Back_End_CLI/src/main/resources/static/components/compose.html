@@ -1,0 +1,28 @@
+<div class="compose-container">
+    <div class="current-path">
+        <div class="path-input-container">
+            Compose 파일: <input type="text" id="compose-path" value="/home/user/docker-compose.yml">
+            <button id="select-compose" class="select-button">파일 선택</button>
+        </div>
+    </div>
+    <div id="compose-screen" class="compose-screen">
+        <textarea id="compose-content" placeholder="docker-compose.yml 파일을 선택하거나 작성하세요"></textarea>
+    </div>
+    <div class="output-container">
+        <div class="output-header">실행 결과</div>
+        <div id="compose-output" class="compose-output">
+            <!-- 실행 결과가 여기에 표시됩니다 -->
+        </div>
+    </div>
+    <div class="button-container">
+        <button id="run-compose" class="action-button run-button">
+            <span class="button-icon">▶</span> 실행
+        </button>
+        <button id="stop-compose" class="action-button stop-button">
+            <span class="button-icon">■</span> 중지
+        </button>
+        <button id="save-compose" class="action-button save-button">
+            <span class="button-icon">💾</span> 저장
+        </button>
+    </div>
+</div> 

@@ -1,0 +1,81 @@
+.cli-container {
+    width: 100%;
+    height: calc(100vh - 350px);
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: all 0.3s ease;
+    min-width: 600px;
+    max-width: 1200px;
+    margin-bottom: 600px;
+}
+
+.current-path {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+#current-path {
+    margin-left: 5px;
+    text-align: left;
+}
+
+.output-screen {
+    flex: 1;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    overflow-y: auto;
+    min-height: 200px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+#command-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+.output-screen div {
+    margin-bottom: 5px;
+    word-wrap: break-word;
+} 
