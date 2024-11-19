@@ -68,7 +68,7 @@ public class ExplorerService {
                         file.setFileType("directory");
                     else
                         file.setFileType("file");
-                    file.setFilePath(path + file.getFileName());
+                    file.setFilePath(path + "/" + file.getFileName());
 
                     files.add(file);
                 }
